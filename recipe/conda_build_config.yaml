@@ -1,17 +1,20 @@
 macos_machine:
-  - x86_64-apple-darwin13.4.0
-  - arm64-apple-darwin20.0.0
+  - x86_64-apple-darwin13.4.0   # [osx and x86_64]
+  - arm64-apple-darwin20.0.0    # [osx and arm64]
 cross_target_platform:
-  - osx-64
-  - osx-arm64
+  - osx-64       # [osx and x86_64]
+  - osx-arm64    # [osx and arm64]
 zip_keys:
   - - cross_target_platform
     - macos_machine
   - - gfortran_version
 gfortran_version:
-  - "7.5.0"
-  - "9.3.0"
-  - "10.2.1"
-  - "11.0.1"
+  - "11.1.0"  # [osx and arm64]
+  - "7.5.0"   # [not (osx and arm64)]
+  - "9.3.0"   # [not (osx and arm64)]
+  - "10.2.1"  # [not (osx and arm64)]
+  - "11.0.1"  # [not (osx and arm64)]
+
 MACOSX_DEPLOYMENT_TARGET:
-  - 10.9
+  - 11.1
+
