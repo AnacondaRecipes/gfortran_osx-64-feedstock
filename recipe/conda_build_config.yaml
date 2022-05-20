@@ -1,9 +1,11 @@
 macos_machine:
   - x86_64-apple-darwin13.4.0   # [osx and x86_64]
   - arm64-apple-darwin20.0.0    # [osx and arm64]
+  - dummy  # [not osx]
 cross_target_platform:
   - osx-64       # [osx and x86_64]
   - osx-arm64    # [osx and arm64]
+  - dummy  # [not osx]
 gfortran_version:
   # - "11.1.0"  # [osx and arm64]
   # - "7.5.0"   # [not (osx and arm64)]
@@ -11,7 +13,8 @@ gfortran_version:
   # - "10.2.1"  # [not (osx and arm64)]
   # - "11.0.1"  # [not (osx and arm64)]
   - "11.2.0"    # [osx]
+  - "0.0.0"  # [not osx]
 MACOSX_DEPLOYMENT_TARGET:
   - 11.1        # [arm64]
   - 10.10       # [not arm64]
-
+  - 0.0         # [not osx]
