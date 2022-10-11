@@ -7,7 +7,7 @@ cross_target_platform:
   - osx-arm64    # [osx and arm64]
   - dummy  # [not osx]
 gfortran_version:
-  - "11.2.0"    # [osx]
+  - "11.3.0"    # [osx]
   - "0.0.0"  # [not osx]
 MACOSX_DEPLOYMENT_TARGET:
   - 11.1        # [arm64]
