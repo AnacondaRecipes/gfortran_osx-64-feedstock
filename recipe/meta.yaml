@@ -62,10 +62,12 @@ outputs:
         - gfortran --help
 
 about:
-  home: http://gcc.gnu.org/
+  home: https://gcc.gnu.org/
   license: GPL-3.0-or-later WITH GCC-exception-3.1
   license_file: COPYING3
   summary: Fortran compiler from the GNU Compiler Collection
+  dev_url: https://gcc.gnu.org/git/?p=gcc.git;a=tree
+  doc_url: https://gcc.gnu.org/onlinedocs/
 
 extra:
   recipe-maintainers:
