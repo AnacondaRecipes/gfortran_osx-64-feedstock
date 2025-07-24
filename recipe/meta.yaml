@@ -10,7 +10,7 @@ package:
   version: {{ version }}{{ version_suffix }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [not osx]
 
 outputs:
@@ -30,8 +30,8 @@ outputs:
         - gfortran_impl_{{ cross_target_platform }} =={{ version }}{{ version_suffix }}
       run:
         - clang
-        - ld64_{{ cross_target_platform }}
-        - cctools_{{ cross_target_platform }}
+        - ld64
+        - cctools
         - gfortran_impl_{{ cross_target_platform }} =={{ version }}{{ version_suffix }}
         - gfortran_impl_{{ target_platform }}
         - libgfortran-devel_{{ cross_target_platform }} =={{ version }}{{ version_suffix }}
