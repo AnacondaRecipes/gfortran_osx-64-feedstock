@@ -31,8 +31,8 @@ outputs:
         - gcc_{{ target_platform }}      # [linux]
       run:
         - clang
-        - ld64_{{ cross_target_platform }}
-        - cctools_{{ cross_target_platform }}
+        - ld64     # _{{ cross_target_platform }}
+        - cctools  # _{{ cross_target_platform }}
         - gfortran_impl_{{ cross_target_platform }} =={{ version }}
         - gfortran_impl_{{ target_platform }}
         - libgfortran-devel_{{ cross_target_platform }} =={{ version }}
