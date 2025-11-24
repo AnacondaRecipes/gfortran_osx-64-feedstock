@@ -28,7 +28,6 @@ outputs:
       host:
         - gfortran_impl_{{ cross_target_platform }} =={{ version }}
         - clang_{{ target_platform }}    # [osx]
-        - gcc_{{ target_platform }}      # [linux]
       run:
         - clang
         - ld64     # _{{ cross_target_platform }}
@@ -53,7 +52,7 @@ outputs:
     script: install_symlink.sh
     build:
       skip: True  # [cross_target_platform != target_platform]
-      skip: True  # [win]
+      skip: True  # [not osx]
     requirements:
       host:
         - gfortran_{{ cross_target_platform }} =={{ version }}
