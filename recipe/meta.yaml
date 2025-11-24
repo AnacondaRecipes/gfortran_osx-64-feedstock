@@ -30,8 +30,10 @@ outputs:
         - clang_{{ target_platform }}    # [osx]
       run:
         - clang
-        - ld64     # _{{ cross_target_platform }}
-        - cctools  # _{{ cross_target_platform }}
+        # our ld64_{{ cross_target_platform }} and cctools_{{ cross_target_platform }}
+        # are out of date
+        - ld64
+        - cctools
         - gfortran_impl_{{ cross_target_platform }} =={{ version }}
         - gfortran_impl_{{ target_platform }}
         - libgfortran-devel_{{ cross_target_platform }} =={{ version }}
@@ -58,6 +60,8 @@ outputs:
         - gfortran_{{ cross_target_platform }} =={{ version }}
       run:
         - gfortran_{{ cross_target_platform }} =={{ version }}
+        # our ld64_{{ cross_target_platform }} and cctools_{{ cross_target_platform }}
+        # are out of date
         - ld64
         - cctools
     test:
